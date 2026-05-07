@@ -1,0 +1,100 @@
+/* Google Fonts already loaded in index.html */
+@import "tailwindcss";
+
+@theme inline {
+  /* Fonts */
+  --font-sans: "Space Grotesk", "DM Sans", system-ui, sans-serif;
+  --font-mono: "Space Mono", "JetBrains Mono", monospace;
+  --font-display: "Doto", "Space Mono", monospace;
+
+  /* shadcn-compatible color names → Nothing tokens */
+  --color-background: var(--nd-bg);
+  --color-foreground: var(--nd-text-primary);
+  --color-card: var(--nd-surface);
+  --color-card-foreground: var(--nd-text-primary);
+  --color-popover: var(--nd-surface-raised);
+  --color-popover-foreground: var(--nd-text-primary);
+  --color-primary: var(--nd-text-display);
+  --color-primary-foreground: var(--nd-bg);
+  --color-secondary: var(--nd-surface-raised);
+  --color-secondary-foreground: var(--nd-text-primary);
+  --color-muted: var(--nd-surface-raised);
+  --color-muted-foreground: var(--nd-text-secondary);
+  --color-destructive: var(--nd-accent);
+  --color-destructive-foreground: #FFFFFF;
+  --color-border: var(--nd-border-subtle);
+  --color-input: var(--nd-border-visible);
+  --color-ring: var(--nd-text-display);
+  --color-accent-ui: var(--nd-surface-raised);
+  --color-accent-ui-foreground: var(--nd-text-primary);
+
+  /* Nothing-specific additions */
+  --color-surface: var(--nd-surface);
+  --color-surface-raised: var(--nd-surface-raised);
+  --color-nd-display: var(--nd-text-display);
+  --color-nd-primary: var(--nd-text-primary);
+  --color-nd-secondary: var(--nd-text-secondary);
+  --color-nd-disabled: var(--nd-text-disabled);
+  --color-nd-accent: var(--nd-accent);
+  --color-nd-success: var(--nd-success);
+  --color-nd-warning: var(--nd-warning);
+  --color-nd-interactive: var(--nd-interactive);
+  --color-border-visible: var(--nd-border-visible);
+
+  /* Status colors */
+  --color-status-pending: var(--nd-warning);
+  --color-status-approved: var(--nd-success);
+  --color-status-rejected: var(--nd-accent);
+  --color-status-timeout: var(--nd-text-disabled);
+  --color-status-auto: var(--nd-interactive);
+  --color-status-error: var(--nd-accent);
+}
+
+/* Light mode (default) */
+:root {
+  --nd-bg: #F5F5F5;
+  --nd-surface: #FFFFFF;
+  --nd-surface-raised: #F0F0F0;
+  --nd-border-subtle: #E8E8E8;
+  --nd-border-visible: #CCCCCC;
+  --nd-text-disabled: #999999;
+  --nd-text-secondary: #666666;
+  --nd-text-primary: #1A1A1A;
+  --nd-text-display: #000000;
+  --nd-accent: #D71921;
+  --nd-accent-subtle: rgba(215, 25, 33, 0.15);
+  --nd-success: #4A9E5C;
+  --nd-warning: #D4A843;
+  --nd-interactive: #007AFF;
+}
+
+/* Dark mode */
+.dark {
+  --nd-bg: #000000;
+  --nd-surface: #111111;
+  --nd-surface-raised: #1A1A1A;
+  --nd-border-subtle: #222222;
+  --nd-border-visible: #333333;
+  --nd-text-disabled: #666666;
+  --nd-text-secondary: #999999;
+  --nd-text-primary: #E8E8E8;
+  --nd-text-display: #FFFFFF;
+  --nd-accent: #D71921;
+  --nd-accent-subtle: rgba(215, 25, 33, 0.15);
+  --nd-success: #4A9E5C;
+  --nd-warning: #D4A843;
+  --nd-interactive: #5B9BF6;
+}
+
+@layer base {
+  * {
+    border-color: var(--nd-border-subtle);
+  }
+  body {
+    background-color: var(--nd-bg);
+    color: var(--nd-text-primary);
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
